@@ -6,7 +6,7 @@ import searchIcon from '../assets/search_icon.svg';
 
 export function Nav() {
     return (
-        <nav>
+        <nav className="mainNav">
 
             <div className="logoContianer">
 

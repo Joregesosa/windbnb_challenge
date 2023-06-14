@@ -1,6 +1,6 @@
 
 
-nav {
+.mainNav {
     width: 100%;
     height: 60px;
 
@@ -10,7 +10,7 @@ nav {
     font-family: var(--font-mulish);
 }
 
-nav ul {
+.mainNav ul {
     width: 297px;
     height: 55px;
 
@@ -28,7 +28,7 @@ nav ul {
     border-radius: 16px;
 }
 
-nav ul li:nth-child(1) {
+.mainNav ul li:nth-child(1) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +40,7 @@ nav ul li:nth-child(1) {
     border-right: solid 1px var(--border-clr);
 }
 
-nav ul li:nth-child(2) {
+.mainNav ul li:nth-child(2) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +53,7 @@ nav ul li:nth-child(2) {
     border-right: solid 1px var(--border-clr);
 }
 
-nav ul li:nth-child(3) {
+.mainNav ul li:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,7 +68,7 @@ nav ul li:nth-child(3) {
 }
 
 @media only screen and (max-width: 768px) {
-    nav {
+    .mainNav {
         flex-direction: column;
         align-items: flex-start;
         height: fit-content;
@@ -78,7 +78,7 @@ nav ul li:nth-child(3) {
         margin-left: 10px;
     }
 
-    nav ul {
+    .mainNav ul {
         width: 90%;
 
         margin: 0 auto;

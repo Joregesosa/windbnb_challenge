@@ -3,6 +3,8 @@ import { Nav } from "./Nav";
 import { Header } from "./Header";
 import {RoomsContainer} from "./RoomsContainer"
 import { Room } from "./Room";
+import {Modal} from "./Modal"
+import { NavOpen } from "./NavOpen";
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
   const [data, setData] = useState([]);
@@ -41,6 +43,10 @@ function App() {
         <Room/>
         <Room/>
       </RoomsContainer>
+
+      <Modal>
+        <NavOpen/>
+      </Modal>
 
     </React.Fragment>
      

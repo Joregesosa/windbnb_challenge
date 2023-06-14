@@ -1,0 +1,10 @@
+.modalContainer{
+    background-color: rgba(17, 22, 69, 0.342);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
