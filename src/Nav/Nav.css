@@ -1,11 +1,4 @@
-:root {
-    --subtitle-clr: #828282;
-    --text-clr: #4F4F4F;
-    --title-clr: #333333;
-    --guests-clr: #BDBDBD;
-    --border-clr: #F2F2F2;
-    --icon-clr: #EB5757;
-}
+
 
 nav {
     width: 100%;
@@ -14,6 +7,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: var(--font-mulish);
 }
 
 nav ul {
@@ -32,7 +26,6 @@ nav ul {
     background: #FFFFFF;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    font-family: 'Mulish', sans-serif;
 }
 
 nav ul li:nth-child(1) {

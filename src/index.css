@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --subtitle-clr: #828282;
+    --text-clr: #4F4F4F;
+    --title-clr: #333333;
+    --guests-clr: #BDBDBD;
+    --border-clr: #F2F2F2;
+    --icon-clr: #EB5757;
+    --font-mulish:'Mulish', sans-serif;
+}
+#root{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}

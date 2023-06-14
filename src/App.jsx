@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Nav } from "./Nav";
+import { Header } from "./Header";
 
 function App() {
   // La variable data es la que va a almacenar los datos de "stays.json" y setData nos ayudará a guardar esos datos en esa variable. Es necesario que inicialicemos esa variable como un array vacío para evitar errores.
@@ -28,6 +29,7 @@ function App() {
   return (
     <React.Fragment>
       <Nav/>
+      <Header/>
     </React.Fragment>
      
   );
