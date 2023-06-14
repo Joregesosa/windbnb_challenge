@@ -59,7 +59,7 @@ nav ul li:nth-child(3) {
     justify-content: center;
 }
 
-ul li img {
+.navMenu li img {
     width: 17px;
     height: 17px;
     margin: auto;

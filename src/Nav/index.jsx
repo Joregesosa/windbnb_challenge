@@ -14,7 +14,7 @@ export function Nav() {
 
             </div>
 
-            <ul>
+            <ul className="navMenu">
                 <li>Helsinki, Finland</li>
                 
                 <li>Add guests</li>

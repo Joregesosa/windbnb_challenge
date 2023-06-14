@@ -1,0 +1,13 @@
+.roomsContainer{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content:space-betweenc;
+
+    padding: 0;
+    list-style: none;
+
+    padding: 30px;
+}
