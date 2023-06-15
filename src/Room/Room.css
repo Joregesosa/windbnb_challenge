@@ -1,7 +1,7 @@
 .item {
-    min-width: 350px;
-    width: 395px;
-
+    min-width: 250px;
+    max-width: 395px;
+    width: fit-content;
     height: fit-content;
 
     display: flex;
@@ -17,8 +17,10 @@
 .item .mainImg {
     width: 100%;
     border-radius: 24px;
-    height: 269px;
+    max-height: 269px;
     min-height: 238.35px;
+
+    object-fit: cover;
 }
 
 .itemSuperHost {
@@ -86,14 +88,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .item {
-        width: 350px;
-        height: fit-content;
-    }
-
-    .item .mainImg {
-        height: 238.35px;
-    }
 
     .itemSuperHost {
         font-size: 10px;

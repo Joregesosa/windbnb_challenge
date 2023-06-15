@@ -16,13 +16,3 @@ export function Room(props) {
         </li>
     )
 }
-
-/*city
-country
-superHost
-title
-rating
-maxGuests
-type
-beds
-photo*/ 
