@@ -1,4 +1,5 @@
-nav {
+
+.openNav {
     width: 100%;
     height: 460px;
 
@@ -38,7 +39,7 @@ nav {
     color: var(--icon-clr);
 }
 
-nav .navOptions {
+.openNav .navOptions {
     width: 100%;
     height: 55px;
 
@@ -55,10 +56,11 @@ nav .navOptions {
 
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
+    font-family: 'Mulish', sans-serif;
 }
 
-nav .locationContainer,
-nav .guestsContainer {
+.openNav .locationContainer,
+.openNav .guestsContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,7 +71,7 @@ nav .guestsContainer {
     border-right: solid 1px var(--border-clr);
 }
 
-nav .locationContainer:focus-within,
+.openNav .locationContainer:focus-within,
 .guestsContainer:focus-within {
     border: solid 1px var(--title-clr);
     border-radius: 16px;
@@ -122,7 +124,7 @@ nav .locationContainer:focus-within,
     background-color: #f54444;
 }
 
-ul .buttonContainer img {
+.openNav ul .buttonContainer img {
     width: 17px;
     height: 17px;
     margin-right: 10px;
@@ -160,7 +162,7 @@ nav>div .locationOptions {
     margin-right: 5px;
 }
 
-.nav>div .guestButtons {
+nav>div .guestButtons {
     display: flex;
     flex-direction: column;
 }
@@ -183,7 +185,6 @@ nav>div .locationOptions {
 
 .adults h2,
 .children h2 {
-    font-family: 'Mulish', sans-serif;
     font-weight: 700;
     font-size: 14px;
     color: var(--title-clr);
@@ -191,7 +192,6 @@ nav>div .locationOptions {
 
 .adults span,
 .children span {
-    font-family: 'Mulish', sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: var(--guests-clr);
@@ -237,7 +237,7 @@ nav>div .locationOptions {
 }
 
 @media only screen and (max-width: 768px) {
-    nav {
+    .openNav {
         padding: 20px;
         height: 70vh;
         position: relative;
@@ -247,14 +247,14 @@ nav>div .locationOptions {
         display: flex;
     }
 
-    nav .navOptions {
+    .openNav .navOptions {
         display: flex;
         height: fit-content;
         flex-direction: column;
     }
 
-    nav .locationContainer,
-    nav .guestsContainer {
+    .openNav .locationContainer,
+    .openNav .guestsContainer {
         height: 55px;
         width: 100%;
     }
@@ -265,7 +265,7 @@ nav>div .locationOptions {
         margin-bottom: 20px;
     }
 
-    nav .guestsContainer {
+    .openNav .guestsContainer {
         border-top: solid 1px var(--border-clr);
     }
 }

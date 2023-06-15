@@ -3,10 +3,12 @@ import './NavOpen.css';
 import searchIcon from "../assets/search_icon.svg"
 export function NavOpen(props) {
     return (
-        <nav>
+
+
+        <nav className="openNav">
             <div className="closed">
                 <h2>Edit your search</h2>
-                <button>X</button>
+                <button id="closeButton">X</button>
             </div>
             <ul className="navOptions">
                 <li className="locationContainer">
