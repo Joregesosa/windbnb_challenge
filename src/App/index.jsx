@@ -11,7 +11,21 @@ import { useRooms } from "./useRooms";
 
 function App() {
 
-  const { isModalOpen, closeModal, openModal, data } = useRooms();
+  const {
+    isModalOpen,
+    closeModal,
+    openModal,
+    data,
+    searchValue,
+    setSearchValue,
+    searchedRooms,
+    show,
+    child,
+    adult,
+    searchLocation,
+    actionSearch,
+    navOptionsAction,
+  } = useRooms();
 
   return (
     <React.Fragment>
@@ -19,15 +33,15 @@ function App() {
       <Nav
         openModal={openModal}
       />
-    
+
       <Header />
 
       <RoomsContainer>
         {data && (
-          data.map(room => (
+          data.map((room, i) => (
+
             <Room
-               
-               
+              key={i}
               superHost={room.superHost}
               title={room.title}
               rating={room.rating}
@@ -35,17 +49,26 @@ function App() {
               beds={room.beds}
               photo={room.photo}
             />
+
           ))
         )}
       </RoomsContainer>
 
       {isModalOpen && (
-
         <Modal
           closeModal={closeModal}
         >
 
           <NavOpen
+            searchValue={searchValue}
+            setSearchValue={setSearchValue}
+            searchedRooms={searchedRooms}
+            show={show}
+            child={child}
+            adult={adult}
+            searchLocation={searchLocation}
+            actionSearch={actionSearch}
+            navOptionsAction={navOptionsAction}
           />
 
         </Modal>
@@ -54,7 +77,6 @@ function App() {
 
 
     </React.Fragment>
-
   );
 }
 
