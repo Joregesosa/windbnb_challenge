@@ -65,6 +65,10 @@
     filter: invert(50%) sepia(73%) saturate(2659%) hue-rotate(328deg) brightness(98%) contrast(89%);
 }
 
+.mainNav .navMenu .textColor{
+    color: var(--guests-clr);
+}
+
 @media only screen and (max-width: 768px) {
     .mainNav {
         flex-direction: column;

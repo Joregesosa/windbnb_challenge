@@ -8,9 +8,13 @@ export function NavOpen({ searchValue, searchedRooms, show, child, adult, search
     return (
 
         <nav className="openNav">
+
             <div className="closed">
+
                 <h2>Edit your search</h2>
+
                 <button id="closeButton">X</button>
+
             </div>
 
             <ul className="navOptions" onClick={actionSearch}>
@@ -40,7 +44,7 @@ export function NavOpen({ searchValue, searchedRooms, show, child, adult, search
 
             </ul>
 
-            <div onClick={navOptionsAction}>
+            <div className="navControls" onClick={navOptionsAction}>
 
                 {show === 'location' && (
 

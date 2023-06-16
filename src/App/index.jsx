@@ -32,6 +32,8 @@ function App() {
 
       <Nav
         openModal={openModal}
+        searchValue={searchValue}
+        guests = {child + adult}
       />
 
       <Header />

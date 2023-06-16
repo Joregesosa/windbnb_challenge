@@ -162,7 +162,7 @@
 nav>div .guestButtons {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin-left: 35%;
 }
 
 .guestButtons h2 {
@@ -170,11 +170,13 @@ nav>div .guestButtons {
     font-size: 14px;
 }
 
-.adults,
-.children {
+.navControls .adults, 
+.navControls .children{
     display: flex;
     flex-direction: column;
     margin: 20px 10px;
+    width: fit-content; 
+
 }
 
 .children {
@@ -270,9 +272,7 @@ nav>div .guestButtons {
 
     .openNav div .guestButtons {
         align-items:flex-start;
+        margin: 0;
     }
-    .openNav .adults, 
-    .openNav .children{
-        width: 40%;
-    }
+  
 }

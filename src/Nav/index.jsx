@@ -4,9 +4,10 @@ import logo from '../assets/logo.svg';
 import searchIcon from '../assets/search_icon.svg';
 
 
-export function Nav(props) {
+export function Nav({ openModal, searchValue, guests }) {
+
     return (
-        <nav  onClick={props.openModal} className="mainNav">
+        <nav className="mainNav">
 
             <div className="logoContianer">
 
@@ -14,11 +15,11 @@ export function Nav(props) {
 
             </div>
 
-            <ul className="navMenu">
-                
-                <li>Helsinki, Finland</li>
-                
-                <li>Add guests</li>
+            <ul onClick={openModal} className="navMenu">
+
+                <li className={`${!searchValue && 'textColor'} `}>{searchValue? searchValue:'Add location'}</li>
+
+                <li className={`${guests>0 && 'textColor'}`}>{guests? guests + ' guests':'Add guests'}</li>
 
                 <li>
 
