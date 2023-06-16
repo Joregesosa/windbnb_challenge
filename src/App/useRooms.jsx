@@ -84,27 +84,36 @@ export function useRooms() {
     }
 
     const filter = () => {
-        let city = searchValue.split(', ')[0];
-        let country = searchValue.split(', ')[1]
+
+        let city = searchValue.length > 0 ? searchValue.split(', ')[0] : '';
+        let country = searchValue.length > 0 ? searchValue.split(', ')[1] : '';
         let guests = child + adult;
         let newRooms = [];
 
-        if (searchValue !== '') {
+        if (searchValue === '' && guests === 0) {
+
+            getData();
+
+        } else {
 
             data.forEach(room => {
 
 
                 if (room.city === city && room.country === country && room.maxGuests >= guests) {
-
+                    console.log('1')
                     newRooms.push(room);
+                    return;
+                }
+
+                if (room.maxGuests >= guests && city === '' && country === '') {
+                    console.log('2')
+                    newRooms.push(room);
+                    return
                 }
 
             })
 
             setData(newRooms);
-
-        }else{
-            getData();
         }
 
         setOpenModal(false);
