@@ -7,7 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    margin-bottom: 20px;
 }
 
 .item span {
@@ -17,9 +16,7 @@
 .item .mainImg {
     width: 100%;
     border-radius: 24px;
-    max-height: 269px;
-    min-height: 238.35px;
-
+    height: 269px;
     object-fit: cover;
 }
 
@@ -88,6 +85,17 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+    .item{
+        max-width: 350px;
+ 
+    }
+
+    .item .mainImg {
+ 
+        height: 238.35px;
+        
+    }
 
     .itemSuperHost {
         font-size: 10px;
