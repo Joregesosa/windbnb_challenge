@@ -36,7 +36,9 @@ function App() {
         guests = {child + adult}
       />
 
-      <Header />
+      <Header 
+        stays = {data.length}
+      />
 
       <RoomsContainer>
         {data && (
