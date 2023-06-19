@@ -163,6 +163,7 @@ nav>div .guestButtons {
     display: flex;
     flex-direction: column;
     margin-left: 35%;
+    
 }
 
 .guestButtons h2 {

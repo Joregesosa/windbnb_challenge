@@ -7,15 +7,13 @@ import { Modal } from "../Modal"
 import { NavOpen } from "../NavOpen";
 import { useRooms } from "./useRooms";
 
-
-
 function App() {
 
   const {
     isModalOpen,
     closeModal,
     openModal,
-    data,
+    filteredData,
     searchValue,
     setSearchValue,
     searchedRooms,
@@ -37,12 +35,12 @@ function App() {
       />
 
       <Header 
-        stays = {data.length}
+        stays = {filteredData.length}
       />
 
       <RoomsContainer>
-        {data && (
-          data.map((room, i) => (
+        {filteredData && (
+          filteredData.map((room, i) => (
 
             <Room
               key={i}

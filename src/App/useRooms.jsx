@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 export function useRooms() {
-    const [isModalOpen, setOpenModal] = useState(false);
-    const [data, setData] = useState([]);
-    const [searchValue, setSearchValue] = useState('');
-    const [show, setShow] = useState();
-    const [child, setChild] = useState(0);
-    const [adult, setAdult] = useState(0);
+    const [isModalOpen, setOpenModal] = useState(false); //abrir o cerrar modal
+    const [filteredData, setFilteredData] = useState([]);// obtien la data filtrada
+    const [data, setData] = useState([]); //mantiene la data sin filtrar
+    const [searchValue, setSearchValue] = useState(''); // almecena la busqueda del usuario (city and contry)
+    const [show, setShow] = useState(); // estado de las opciones de fitros 
+    const [child, setChild] = useState(0); // almacena el valor de ninos en filtro de usuarios Nav Open
+    const [adult, setAdult] = useState(0); // almacena el valor de adultos en filtro de usuario NavOpen
+
+    // almacenar resultados de busqueda
     let searchedRooms = [];
 
     useEffect(() => {
@@ -15,15 +18,15 @@ export function useRooms() {
     }, []);
 
 
-
+    // guet data from stay.json
     const getData = async () => {
 
         try {
             const res = await fetch("stays.json");
 
             const resJson = await res.json();
-
             setData(resJson);
+            setFilteredData(resJson);
 
         } catch (error) {
 
@@ -33,6 +36,7 @@ export function useRooms() {
 
     };
 
+    // cerrar el modal
     function closeModal(e) {
         let id = e.target.id;
         (id === 'Container' ||
@@ -40,11 +44,12 @@ export function useRooms() {
             && setOpenModal(false);
 
     }
-
+    // abrir el modal
     function openModal() {
         setOpenModal(true);
     }
 
+    // filtrar data en el search open nava
     if (!searchValue.length >= 1) {
 
         searchedRooms = [];
@@ -59,15 +64,18 @@ export function useRooms() {
 
     }
 
+    // obtner valor input search
     const searchLocation = (eve) => {
         setSearchValue(eve.target.value);
     }
 
+    // on click search button open Nav  y los inputs add location and add guest (guests agrega una clase  al componente a mostrar)
     const actionSearch = (eve) => {
         let id = eve.target.id;
         id === 'button' ? filter() : setShow(id);
     }
 
+    // acciones opciones del nava (option--> <li> resultados de busqueda en array)
     const navOptionsAction = (eve) => {
         let id = eve.target.id;
         let clase = eve.target.className;
@@ -83,6 +91,7 @@ export function useRooms() {
 
     }
 
+    // solo se activa con el acction search (on click button search NavOpen)
     const filter = () => {
 
         let city = searchValue.length > 0 ? searchValue.split(', ')[0] : '';
@@ -100,20 +109,20 @@ export function useRooms() {
 
 
                 if (room.city === city && room.country === country && room.maxGuests >= guests) {
-                    console.log('1')
+
                     newRooms.push(room);
                     return;
                 }
 
                 if (room.maxGuests >= guests && city === '' && country === '') {
-                    console.log('2')
+
                     newRooms.push(room);
                     return
                 }
 
             })
 
-            setData(newRooms);
+            setFilteredData(newRooms);
         }
 
         setOpenModal(false);
@@ -125,7 +134,7 @@ export function useRooms() {
         setOpenModal,
         closeModal,
         openModal,
-        data,
+        filteredData,
         searchedRooms,
         searchValue,
         setSearchValue,
