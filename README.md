@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://joregesosa.github.io/windbnb-challenge/">
+    <a href="https://joregesosa.github.io/windbnb_challenge/">
       Demo
     </a>
     <span> | </span>
@@ -32,7 +32,7 @@
 
 <!-- OVERVIEW -->
 
-<img width="320" src="./src/assets/windbnb-mobile.png" alt="Captrua Demo Mobile"/>
+<img width="320" align='center' src="./src/assets/windbnb-mobile.png" alt="Captrua Demo Mobile"/>
 
 
 ### Built With
@@ -51,7 +51,7 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/Joregesosa/windbnb-challenge
+$ git clone https://github.com/Joregesosa/windbnb_challenge.git
 
 # Install dependencies
 $ npm install
